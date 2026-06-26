@@ -1,86 +1,98 @@
-import { useState } from 'react';
-import { Menu, X, Cpu } from 'lucide-react';
+import { Cpu } from 'lucide-react';
 
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'Find a Center', href: '#centers' },
-    { label: 'What We Accept', href: '#accept' },
-    { label: 'How It Works', href: '#works' },
-    { label: 'About', href: '#footer' },
-  ];
-
   return (
-    <nav style={{ position: 'sticky', top: 0, zIndex: 50, backgroundColor: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(4px)', borderBottom: '1px solid #e5e7eb' }}>
-      <div className="max-w-container px-gutter" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem 1.5rem' }}>
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-100 shadow-sm">
+      <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between py-4">
         {/* Logo */}
-        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
-          <div style={{ width: '2rem', height: '2rem', backgroundColor: '#1a7a4a', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Cpu size={20} style={{ color: 'white', strokeWidth: 2 }} />
+        <a href="#home" className="flex items-center gap-2 flex-shrink-0 group text-decoration-none">
+          <div className="w-9 h-9 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-200">
+            <Cpu size={20} className="text-white" strokeWidth={2} />
           </div>
-          <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#111827' }}>ReCircuit</span>
+          <span className="text-xl font-bold text-neutral-900 tracking-tight">
+            Re<span className="text-accent">Circuit</span>
+          </span>
         </a>
 
-        {/* Desktop nav links */}
-        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }} className="hidden-mobile">
-          {navLinks.map((link) => (
+        {/* Desktop nav */}
+        <div className="hidden md:flex gap-8 items-center">
+          {[
+            { label: 'Home', href: '#home' },
+            { label: 'Find a Center', href: '#centers' },
+            { label: 'What We Accept', href: '#accept' },
+            { label: 'How It Works', href: '#works' },
+            { label: 'About', href: '#footer' },
+          ].map((link) => (
             <a
               key={link.label}
               href={link.href}
-              style={{ fontSize: '1rem', fontWeight: 500, color: '#6b7280', textDecoration: 'none', transition: 'color 0.2s' }}
-              onMouseEnter={(e) => e.target.style.color = '#1a7a4a'}
-              onMouseLeave={(e) => e.target.style.color = '#6b7280'}
+              className="text-sm font-medium text-neutral-500 hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        {/* CTA button (desktop) */}
-        <button className="btn-primary" style={{ display: 'none' }}>
-          Drop Off Now
-        </button>
-
-        {/* Mobile menu button */}
-        <button
-          style={{ padding: '0.5rem', display: 'none', background: 'none', border: 'none', cursor: 'pointer' }}
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
+        {/* CTA */}
+        <a
+          href="#centers"
+          className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-full shadow-sm hover:shadow-glow-accent hover:-translate-y-0.5 transition-all duration-200"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+          Drop Off Now
+        </a>
 
-      {/* Mobile menu */}
-      {isOpen && (
-        <div style={{ borderTop: '1px solid #e5e7eb', backgroundColor: '#f9fafb' }}>
-          <div className="max-w-container px-gutter" style={{ padding: '1rem 1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            {navLinks.map((link) => (
+        {/* Mobile hamburger - simple inline */}
+        <MobileMenu />
+      </div>
+    </nav>
+  );
+}
+
+function MobileMenu() {
+  const [open, setOpen] = React.useState(false);
+  const links = [
+    { label: 'Home', href: '#home' },
+    { label: 'Find a Center', href: '#centers' },
+    { label: 'What We Accept', href: '#accept' },
+    { label: 'How It Works', href: '#works' },
+    { label: 'About', href: '#footer' },
+  ];
+  return (
+    <>
+      <button
+        onClick={() => setOpen(!open)}
+        className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-neutral-100 transition-colors"
+        aria-label="Toggle menu"
+      >
+        <span className={`block w-5 h-0.5 bg-neutral-700 transition-transform duration-200 ${open ? 'rotate-45 translate-y-2' : ''}`}></span>
+        <span className={`block w-5 h-0.5 bg-neutral-700 transition-opacity duration-200 ${open ? 'opacity-0' : ''}`}></span>
+        <span className={`block w-5 h-0.5 bg-neutral-700 transition-transform duration-200 ${open ? '-rotate-45 -translate-y-2' : ''}`}></span>
+      </button>
+      {open && (
+        <div className="absolute top-full left-0 right-0 bg-white border-b border-neutral-100 shadow-lg md:hidden z-50">
+          <div className="max-w-[1200px] mx-auto px-6 py-4 flex flex-col gap-4">
+            {links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                style={{ fontSize: '1rem', fontWeight: 500, color: '#6b7280', textDecoration: 'none' }}
-                onClick={() => setIsOpen(false)}
+                className="text-base font-medium text-neutral-600 hover:text-primary transition-colors"
+                onClick={() => setOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <button className="btn-primary" style={{ width: '100%' }}>
+            <a
+              href="#centers"
+              className="inline-flex items-center justify-center px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-full shadow-sm"
+              onClick={() => setOpen(false)}
+            >
               Drop Off Now
-            </button>
+            </a>
           </div>
         </div>
       )}
-
-      <style>{`
-        @media (max-width: 768px) {
-          .hidden-mobile {
-            display: none !important;
-          }
-        }
-      `}</style>
-    </nav>
+    </>
   );
 }
+
+import React from 'react';

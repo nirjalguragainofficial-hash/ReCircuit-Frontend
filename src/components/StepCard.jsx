@@ -1,8 +1,8 @@
-import { Search, Recycle2, BarChart3 } from 'lucide-react';
+import { Search, Recycle, BarChart3 } from 'lucide-react';
 
 const iconMap = {
   Search: Search,
-  Recycle2: Recycle2,
+  Recycle2: Recycle,
   BarChart3: BarChart3,
 };
 
