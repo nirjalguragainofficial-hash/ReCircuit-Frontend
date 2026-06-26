@@ -23,12 +23,15 @@ export function Hero() {
   return (
     <section id="home" className="relative bg-white overflow-hidden py-20 md:py-28">
       <CircuitPattern />
+      
+      {/* Premium ambient glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="relative max-w-container mx-auto px-gutter">
         <div className="max-w-3xl mx-auto text-center">
           {/* Main headline */}
           <h1 className="text-display-lg md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
-            Give Your Old Electronics a Second Life
+            Give Your Old Electronics a <span className="text-gradient-green font-extrabold">Second Life</span>
           </h1>
 
           {/* Subheadline */}
@@ -38,17 +41,17 @@ export function Hero() {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="px-8 py-4 bg-accent text-white rounded-btn font-bold text-body hover:opacity-90 transition-all duration-200 hover:scale-105 flex items-center justify-center gap-2">
+            <button className="px-8 py-4 bg-accent text-white rounded-btn font-bold text-body hover:opacity-90 shadow-md hover:shadow-glow-accent hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2">
               Find a Collection Center
-              <ArrowRight size={20} />
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-8 py-4 border-2 border-primary text-primary rounded-btn font-bold text-body hover:bg-primary-lt transition-colors duration-200">
+            <button className="px-8 py-4 border-2 border-primary text-primary rounded-btn font-bold text-body hover:bg-primary-lt hover:-translate-y-0.5 transition-all duration-300">
               See What We Accept
             </button>
           </div>
 
           {/* Stats bar */}
-          <div className="bg-primary-lt rounded-card p-8 border border-primary-lt/50">
+          <div className="glass-card rounded-card p-8 border border-primary/10 shadow-subtle hover-glow-accent transition-all duration-300">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="py-2">
                 <p className="text-2xl md:text-3xl font-bold text-primary">3.2M+</p>

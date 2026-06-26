@@ -47,15 +47,15 @@ export function FindCenter() {
         </div>
 
         {/* Filter chips */}
-        <div className="mb-12 flex flex-wrap gap-3 justify-center">
+        <div className="mb-12 flex overflow-x-auto no-scrollbar md:flex-wrap gap-3 justify-start md:justify-center px-4 md:px-0 pb-2">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-btn font-medium text-body-sm transition-all duration-200 ${
+              className={`px-4 py-2 rounded-btn font-medium text-body-sm transition-all duration-200 whitespace-nowrap hover:-translate-y-0.5 ${
                 activeFilter === filter
-                  ? 'bg-accent text-white'
-                  : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'
+                  ? 'bg-accent text-white shadow-glow-accent'
+                  : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 hover:text-neutral-900'
               }`}
             >
               {filter}
