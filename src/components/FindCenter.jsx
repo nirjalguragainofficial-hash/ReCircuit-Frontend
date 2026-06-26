@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Search } from 'lucide-react';
+import { Search, MapPin } from 'lucide-react';
 import { CenterCard } from './CenterCard';
 import { mockCenters } from '../data/mockData';
 
@@ -20,42 +20,44 @@ export function FindCenter() {
   }, [searchLocation, activeFilter]);
 
   return (
-    <section id="centers" className="bg-white py-20 md:py-28">
-      <div className="max-w-container mx-auto px-gutter">
+    <section id="centers" className="bg-white py-24 md:py-32">
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* Section header */}
-        <div className="text-center mb-12">
-          <h2 className="text-display md:text-4xl font-bold text-neutral-900 mb-4">
-            Find a Drop-Off Center Near You
+        <div className="text-center mb-14">
+          <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest rounded-full mb-4">Find a Center</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-900 mb-4 tracking-tight">
+            Drop-Off Centers{' '}
+            <span className="text-gradient-green">Near You</span>
           </h2>
-          <p className="text-body text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-500 max-w-xl mx-auto leading-relaxed">
             Search for certified recycling centers in your area.
           </p>
         </div>
 
         {/* Search bar */}
-        <div className="mb-8 max-w-2xl mx-auto">
+        <div className="mb-6 max-w-2xl mx-auto">
           <div className="relative">
             <input
               type="text"
               placeholder="Enter your location or address..."
               value={searchLocation}
               onChange={(e) => setSearchLocation(e.target.value)}
-              className="w-full px-6 py-3 pl-12 border border-neutral-200 rounded-input text-body focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+              className="w-full px-6 py-4 pl-14 bg-neutral-50 border-2 border-neutral-200 rounded-2xl text-base focus:outline-none focus:border-accent focus:ring-4 focus:ring-accent/10 transition-all duration-200 placeholder-neutral-300"
             />
-            <Search size={20} className="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral-400" />
+            <Search size={20} className="absolute left-5 top-1/2 -translate-y-1/2 text-neutral-400" />
           </div>
         </div>
 
         {/* Filter chips */}
-        <div className="mb-12 flex overflow-x-auto no-scrollbar md:flex-wrap gap-3 justify-start md:justify-center px-4 md:px-0 pb-2">
+        <div className="mb-10 flex overflow-x-auto no-scrollbar md:flex-wrap gap-2 justify-start md:justify-center pb-2">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-btn font-medium text-body-sm transition-all duration-200 whitespace-nowrap hover:-translate-y-0.5 ${
+              className={`px-5 py-2 rounded-full font-semibold text-sm transition-all duration-200 whitespace-nowrap border ${
                 activeFilter === filter
-                  ? 'bg-accent text-white shadow-glow-accent'
-                  : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 hover:text-neutral-900'
+                  ? 'bg-accent text-white border-accent shadow-sm'
+                  : 'bg-white text-neutral-500 border-neutral-200 hover:border-accent/50 hover:text-accent'
               }`}
             >
               {filter}
@@ -64,9 +66,12 @@ export function FindCenter() {
         </div>
 
         {/* Results count */}
-        <p className="text-body-sm text-neutral-600 mb-6">
-          Showing {filteredCenters.length} center{filteredCenters.length !== 1 ? 's' : ''}
-        </p>
+        <div className="flex items-center gap-2 mb-6">
+          <MapPin size={16} className="text-accent" />
+          <p className="text-sm font-medium text-neutral-500">
+            Showing <span className="text-neutral-900 font-bold">{filteredCenters.length}</span> center{filteredCenters.length !== 1 ? 's' : ''}
+          </p>
+        </div>
 
         {/* Centers grid */}
         {filteredCenters.length > 0 ? (
@@ -76,10 +81,10 @@ export function FindCenter() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-12 bg-neutral-50 rounded-card">
-            <p className="text-body text-neutral-600">
-              No centers found matching your criteria. Try adjusting your search or filters.
-            </p>
+          <div className="text-center py-20 bg-neutral-50 rounded-2xl border-2 border-dashed border-neutral-200">
+            <Search size={40} className="text-neutral-300 mx-auto mb-4" />
+            <p className="text-lg font-medium text-neutral-400">No centers found matching your criteria.</p>
+            <p className="text-sm text-neutral-400 mt-1">Try adjusting your search or filters.</p>
           </div>
         )}
       </div>
