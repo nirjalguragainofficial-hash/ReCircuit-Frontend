@@ -1,19 +1,9 @@
 import { useState } from 'react';
-import { Smartphone, Laptop, Tablet, Monitor, Printer, Keyboard, Lightbulb, Battery, Tv, Gamepad2, Camera, Wifi, ChevronDown } from 'lucide-react';
+import { Smartphone, Laptop, Tablet, Monitor, Printer, Keyboard, Lightbulb, Battery, Tv, Gamepad2, Camera, Wifi, ChevronDown, CheckCircle2 } from 'lucide-react';
 
 const iconMap = {
-  Smartphone,
-  Laptop,
-  Tablet,
-  Monitor,
-  Printer,
-  Keyboard,
-  Lightbulb,
-  Battery,
-  Tv,
-  Gamepad2,
-  Camera,
-  Wifi,
+  Smartphone, Laptop, Tablet, Monitor, Printer, Keyboard,
+  Lightbulb, Battery, Tv, Gamepad2, Camera, Wifi,
 };
 
 const categoryIcons = {
@@ -31,78 +21,64 @@ const categoryIcons = {
   'Routers & Modems': 'Wifi',
 };
 
+const extraItems = [
+  'Desktop Computers', 'External Hard Drives', 'USB Flash Drives',
+  'Headphones', 'Smartwatches', 'Microwave Ovens', 'E-Readers',
+  'Power Banks', 'Smart Speakers', 'VR Headsets',
+];
+
 export function WhatWeAccept() {
   const [showMore, setShowMore] = useState(false);
 
-  const items = [
-    'Smartphones', 'Laptops', 'Tablets', 'Monitors',
-    'Printers', 'Keyboards', 'Cables & Chargers', 'Batteries',
-    'TVs', 'Game Consoles', 'Cameras', 'Routers & Modems',
-  ];
+  const items = Object.keys(categoryIcons);
 
   return (
-    <section id="accept" className="bg-neutral-50 py-20 md:py-28">
-      <div className="max-w-container mx-auto px-gutter">
+    <section id="accept" className="bg-neutral-50 py-24 md:py-32">
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-display md:text-4xl font-bold text-neutral-900 mb-4">
-            50+ Electronics Accepted
+          <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest rounded-full mb-4">What We Accept</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-900 mb-4 tracking-tight">
+            50+ Electronics{' '}
+            <span className="text-gradient-green">Accepted</span>
           </h2>
-          <p className="text-body text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-500 max-w-xl mx-auto leading-relaxed">
             We responsibly recycle a wide range of electronics and devices.
           </p>
         </div>
 
         {/* Items grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8">
           {items.map((item) => {
             const IconComponent = iconMap[categoryIcons[item]];
             return (
-              <div key={item} className="flex flex-col items-center text-center group cursor-pointer">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-card bg-white border border-neutral-200 flex items-center justify-center mb-4 group-hover:bg-primary-lt group-hover:border-primary transition-all duration-200">
-                  <IconComponent size={32} className="text-primary" strokeWidth={1.5} />
+              <div
+                key={item}
+                className="group flex flex-col items-center text-center p-5 bg-white border-2 border-neutral-100 rounded-2xl cursor-pointer hover:border-accent/40 hover:bg-accent/5 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="w-14 h-14 rounded-xl bg-primary-lt flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-accent/15 transition-all duration-300">
+                  {IconComponent && <IconComponent size={28} className="text-primary" strokeWidth={1.5} />}
                 </div>
-                <p className="text-body-sm font-medium text-neutral-900">{item}</p>
+                <p className="text-sm font-semibold text-neutral-700 leading-tight">{item}</p>
               </div>
             );
           })}
         </div>
 
-        {/* Expandable full list */}
+        {/* Expanded full list */}
         {showMore && (
-          <div className="mt-12 p-8 bg-white rounded-card border border-neutral-100">
-            <h3 className="text-subheading font-bold text-neutral-900 mb-6">Complete Accepted Items List</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {items.map((item) => (
-                <div key={item} className="flex items-center gap-3">
+          <div className="mt-8 p-8 bg-white rounded-2xl border border-neutral-100 shadow-sm">
+            <h3 className="text-xl font-bold text-neutral-900 mb-6 flex items-center gap-2">
+              <CheckCircle2 size={22} className="text-accent" />
+              Complete Accepted Items List
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {[...items, ...extraItems].map((item) => (
+                <div key={item} className="flex items-center gap-2.5 py-1.5">
                   <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                  <span className="text-body text-neutral-600">{item}</span>
+                  <span className="text-sm text-neutral-600 font-medium">{item}</span>
                 </div>
               ))}
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                <span className="text-body text-neutral-600">Desktop Computers</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                <span className="text-body text-neutral-600">External Hard Drives</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                <span className="text-body text-neutral-600">USB Flash Drives</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                <span className="text-body text-neutral-600">Headphones</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                <span className="text-body text-neutral-600">Smartwatches</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                <span className="text-body text-neutral-600">Microwave Ovens</span>
-              </div>
             </div>
           </div>
         )}
@@ -111,10 +87,13 @@ export function WhatWeAccept() {
         <div className="flex justify-center mt-8">
           <button
             onClick={() => setShowMore(!showMore)}
-            className="flex items-center gap-2 px-6 py-3 border border-primary text-primary rounded-btn font-semibold text-body hover:bg-primary-lt transition-colors duration-200"
+            className="flex items-center gap-2 px-7 py-3 border-2 border-primary/20 text-primary bg-white rounded-full font-bold text-sm hover:bg-primary-lt hover:border-primary transition-all duration-200 shadow-sm"
           >
             {showMore ? 'Show Less' : 'Not Sure? See Full List'}
-            <ChevronDown size={20} className={`transition-transform duration-300 ${showMore ? 'rotate-180' : ''}`} />
+            <ChevronDown
+              size={18}
+              className={`transition-transform duration-300 ${showMore ? 'rotate-180' : ''}`}
+            />
           </button>
         </div>
       </div>
