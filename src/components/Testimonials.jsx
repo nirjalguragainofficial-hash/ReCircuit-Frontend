@@ -3,20 +3,21 @@ import { testimonials } from '../data/mockData';
 
 export function Testimonials() {
   return (
-    <section className="bg-white py-20 md:py-28">
-      <div className="max-w-container mx-auto px-gutter">
+    <section className="bg-neutral-50 py-24 md:py-32">
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-display md:text-4xl font-bold text-neutral-900 mb-4">
-            Trusted by Conscious Consumers
+          <span className="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 text-xs font-bold uppercase tracking-widest rounded-full mb-4">Testimonials</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-900 mb-4 tracking-tight">
+            Trusted by <span className="text-gradient-green">Conscious Consumers</span>
           </h2>
-          <p className="text-body text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-500 max-w-xl mx-auto leading-relaxed">
             Hear from people making a difference with ReCircuit.
           </p>
         </div>
 
         {/* Testimonials grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.id} testimonial={testimonial} />
           ))}

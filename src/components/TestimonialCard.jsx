@@ -1,26 +1,35 @@
-import { Star } from 'lucide-react';
+import { Star, Quote } from 'lucide-react';
 
 export function TestimonialCard({ testimonial }) {
   return (
-    <div className="bg-white border border-neutral-100 rounded-card p-6 shadow-subtle">
+    <div className="group bg-white border border-neutral-100 rounded-2xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col relative overflow-hidden">
+      {/* Quote icon watermark */}
+      <Quote size={60} className="absolute top-4 right-4 text-neutral-50 rotate-180 pointer-events-none" />
+
       {/* Stars */}
       <div className="flex gap-1 mb-4">
-        {Array.from({ length: testimonial.rating }).map((_, i) => (
-          <Star key={i} size={16} className="fill-accent text-accent" />
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star
+            key={i}
+            size={15}
+            className={i < testimonial.rating ? 'fill-amber-400 text-amber-400' : 'fill-neutral-200 text-neutral-200'}
+          />
         ))}
       </div>
 
       {/* Quote */}
-      <p className="text-body text-neutral-600 mb-6 italic leading-relaxed">"{testimonial.quote}"</p>
+      <p className="text-base text-neutral-600 mb-6 italic leading-relaxed flex-1 relative z-10">
+        "{testimonial.quote}"
+      </p>
 
       {/* Avatar and info */}
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-          <span className="text-white font-bold text-body-sm">{testimonial.initials}</span>
+        <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 shadow-sm">
+          <span className="text-white font-bold text-sm">{testimonial.initials}</span>
         </div>
         <div>
-          <p className="font-semibold text-neutral-900">{testimonial.name}</p>
-          <p className="text-body-sm text-neutral-500">{testimonial.city}</p>
+          <p className="font-bold text-neutral-900 text-sm">{testimonial.name}</p>
+          <p className="text-xs text-neutral-400 font-medium">{testimonial.city}</p>
         </div>
       </div>
     </div>
