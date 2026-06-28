@@ -81,7 +81,7 @@ export const testimonials = [
     id: 1,
     initials: 'SK',
     name: 'Sarah Khan',
-    city: 'San Francisco, CA',
+    city: 'Bihar, Nepal',
     rating: 5,
     quote: 'I was impressed by how easy it was to find a recycling center. ReCircuit made me feel like I was actually making a difference for the planet.',
   },
