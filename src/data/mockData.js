@@ -87,9 +87,9 @@ export const testimonials = [
   },
   {
     id: 2,
-    initials: 'JM',
-    name: 'James Morrison',
-    city: 'Seattle, WA',
+    initials: 'NG',
+    name: 'Naresh Guragain',
+    city: 'Biratnagar, Nepal',
     rating: 5,
     quote: 'The team was professional and helpful. I loved getting a confirmation email showing exactly how my old laptop would be responsibly recycled.',
   },
