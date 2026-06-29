@@ -24,7 +24,7 @@ export function TestimonialCard({ testimonial }) {
 
       {/* Avatar and info */}
       <div className="flex items-center gap-3">
-        <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 shadow-sm">
+        <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 shadow-sm" title={testimonial.name}>
           <span className="text-white font-bold text-sm">{testimonial.initials}</span>
         </div>
         <div>
