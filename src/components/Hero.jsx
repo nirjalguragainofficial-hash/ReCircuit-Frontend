@@ -89,7 +89,7 @@ export function Hero() {
                 <p className="text-xs font-semibold text-neutral-400 uppercase tracking-widest mt-1">Certified Centers</p>
               </div>
               <div className="px-4 py-2 text-center">
-                <p className="text-3xl md:text-4xl font-extrabold text-gradient-green">28</p>
+                <p className="text-3xl md:text-4xl font-extrabold text-gradient-green">32</p>
                 <p className="text-xs font-semibold text-neutral-400 uppercase tracking-widest mt-1">Cities Covered</p>
               </div>
             </div>
