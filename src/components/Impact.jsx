@@ -22,7 +22,7 @@ export function Impact() {
             Every Device <span className="text-accent">Matters</span>
           </h2>
           <p className="text-lg text-neutral-400 max-w-xl mx-auto leading-relaxed">
-            Together, we're creating a sustainable future by responsibly recycling electronics.
+            Together, we’re building a cleaner future by recycling electronics responsibly.
           </p>
         </div>
 
