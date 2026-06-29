@@ -46,7 +46,7 @@ export function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full mb-8">
             <Leaf size={14} className="text-primary" />
-            <span className="text-xs font-semibold text-primary uppercase tracking-widest">Certified E-Waste Recycling</span>
+            <span className="text-xs font-semibold text-primary uppercase tracking-widest">Trusted E-Waste Recycling</span>
           </div>
 
           {/* Main headline */}
