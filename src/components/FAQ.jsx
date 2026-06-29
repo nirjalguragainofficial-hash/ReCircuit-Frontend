@@ -4,7 +4,7 @@ import { MessageCircle } from 'lucide-react';
 
 export function FAQ() {
   return (
-    <section className="bg-white py-24 md:py-32">
+    <section id="faq" aria-label="Frequently Asked Questions" className="bg-white py-24 md:py-32">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
