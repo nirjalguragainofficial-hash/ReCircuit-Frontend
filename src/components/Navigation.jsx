@@ -8,7 +8,7 @@ function MobileMenu() {
     { label: 'Find a Center', href: '#centers' },
     { label: 'What We Accept', href: '#accept' },
     { label: 'How It Works', href: '#works' },
-    { label: 'About', href: '#footer' },
+{ label: 'About Us', href: '#footer' },
   ];
 
   return (
