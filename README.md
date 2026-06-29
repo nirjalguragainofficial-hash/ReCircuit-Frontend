@@ -1,6 +1,6 @@
-# React + Vite
+# ReCircuit Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+ReCircuit is an e-waste recycling platform built with React and Vite. It helps users find certified e-waste collection centers nearby.
 
 Currently, two official plugins are available:
 
