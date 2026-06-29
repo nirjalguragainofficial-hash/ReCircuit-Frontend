@@ -97,7 +97,7 @@ export const testimonials = [
     id: 3,
     initials: 'AM',
     name: 'Amira Patel',
-    city: 'Portland, OR',
+    city: 'Kathmandu, Nepal',
     rating: 4,
     quote: 'Finally, a straightforward way to recycle electronics without guilt. The center staff knew exactly what to do with my old devices.',
   },
