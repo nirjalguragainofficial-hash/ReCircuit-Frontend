@@ -8,6 +8,7 @@ export const mockCenters = [
     hours: 'Mon-Fri: 9am-6pm, Sat: 10am-4pm',
     certified: true,
     rating: 4.8,
+    phone: '+977-01-4567890',
   },
   {
     id: 2,
