@@ -17,7 +17,7 @@ export function HowItWorks() {
             <span className="text-gradient-green">Responsible Recycling</span>
           </h2>
           <p className="text-lg text-neutral-500 max-w-xl mx-auto leading-relaxed">
-            Our streamlined process makes it simple to recycle responsibly.
+            Our simple process helps you recycle responsibly in just a few steps.
           </p>
         </div>
 
