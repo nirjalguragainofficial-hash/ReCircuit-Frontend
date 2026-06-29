@@ -12,7 +12,7 @@ export function Testimonials() {
             Trusted by <span className="text-gradient-green">Conscious Consumers</span>
           </h2>
           <p className="text-lg text-neutral-500 max-w-xl mx-auto leading-relaxed">
-            Hear from people making a difference with ReCircuit.
+            Hear from people who are making a real difference with ReCircuit every day.
           </p>
         </div>
 
