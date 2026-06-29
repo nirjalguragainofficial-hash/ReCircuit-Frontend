@@ -70,4 +70,13 @@ body {
     border-color: rgba(0, 200, 117, 0.4);
     transform: translateY(-2px);
   }
+
+  /* Focus ring utility for accessibility */
+  .focus-ring {
+    outline: none;
+  }
+  .focus-ring:focus-visible {
+    box-shadow: 0 0 0 3px rgba(0, 200, 117, 0.4);
+    border-radius: 8px;
+  }
 }
