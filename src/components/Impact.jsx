@@ -6,7 +6,7 @@ const statIcons = [Recycle, BarChart3, Users];
 
 export function Impact() {
   return (
-    <section className="relative bg-neutral-900 py-24 md:py-32 overflow-hidden">
+    <section id="impact" aria-label="Our Environmental Impact" className="relative bg-neutral-900 py-24 md:py-32 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[100px] -mr-64 -mt-64 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[80px] -ml-40 -mb-40 pointer-events-none"></div>
