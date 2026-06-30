@@ -11,7 +11,7 @@ export function Footer() {
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
           <div>
             <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-2 tracking-tight">Ready to Recycle?</h3>
-            <p className="text-white/80 text-lg">Find a certified drop-off center near you today.</p>
+            <p className="text-white/80 text-lg">Join thousands of responsible recyclers and find a certified center near you.</p>
           </div>
           <a
             href="#centers"
