@@ -7,7 +7,7 @@ export function TestimonialCard({ testimonial }) {
       <Quote size={60} className="absolute top-4 right-4 text-neutral-50 rotate-180 pointer-events-none" />
 
       {/* Stars */}
-      <div className="flex gap-1 mb-4">
+      <div className="flex gap-1 mb-4" aria-label={`Rating: ${testimonial.rating} out of 5 stars`}>
         {Array.from({ length: 5 }).map((_, i) => (
           <Star
             key={i}
