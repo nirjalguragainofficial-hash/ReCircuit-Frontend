@@ -3,7 +3,7 @@ import { testimonials } from '../data/mockData';
 
 export function Testimonials() {
   return (
-    <section className="bg-neutral-50 py-24 md:py-32">
+    <section id="testimonials" aria-label="Customer Testimonials" className="bg-neutral-50 py-24 md:py-32">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
