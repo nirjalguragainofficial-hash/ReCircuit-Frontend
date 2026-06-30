@@ -40,6 +40,7 @@ export function FindCenter() {
             <input
               type="text"
               placeholder="Enter your location or address..."
+              aria-label="Search for recycling centers by location"
               value={searchLocation}
               onChange={(e) => setSearchLocation(e.target.value)}
               className="w-full px-6 py-4 pl-14 bg-neutral-50 border-2 border-neutral-200 rounded-2xl text-base focus:outline-none focus:border-accent focus:ring-4 focus:ring-accent/10 transition-all duration-200 placeholder-neutral-300"
