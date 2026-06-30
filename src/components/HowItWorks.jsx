@@ -39,7 +39,7 @@ export function HowItWorks() {
             href="#centers"
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold text-base rounded-full shadow-lg hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200"
           >
-            Get Started Today <ArrowRight size={18} />
+            Start Recycling Now <ArrowRight size={18} />
           </a>
         </div>
       </div>
