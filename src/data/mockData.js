@@ -160,7 +160,7 @@ export const steps = [
 
 export const stats = [
   {
-    number: '12000',
+    number: '15000',
     unit: 'tons',
     label: 'E-waste Diverted from Landfills',
   },
