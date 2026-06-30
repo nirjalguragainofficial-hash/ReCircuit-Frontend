@@ -33,6 +33,11 @@ body {
   line-height: 1.6;
 }
 
+::selection {
+  background-color: rgba(0, 200, 117, 0.2);
+  color: var(--neutral-900);
+}
+
 @layer utilities {
   /* Scrollbar hide utility */
   .no-scrollbar::-webkit-scrollbar {
