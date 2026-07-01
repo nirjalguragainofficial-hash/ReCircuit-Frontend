@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Search, MapPin } from 'lucide-react';
+import { Search, MapPin, X } from 'lucide-react';
 import { CenterCard } from './CenterCard';
 import { mockCenters } from '../data/mockData';
 
@@ -43,11 +43,21 @@ export function FindCenter() {
               aria-label="Search for recycling centers by location"
               value={searchLocation}
               onChange={(e) => setSearchLocation(e.target.value)}
-              className="w-full px-6 py-4 pl-14 bg-neutral-50 border-2 border-neutral-200 rounded-2xl text-base focus:outline-none focus:border-accent focus:ring-4 focus:ring-accent/10 transition-all duration-200 placeholder-neutral-300"
+              className="w-full pl-14 pr-12 py-4 bg-neutral-50 border-2 border-neutral-200 rounded-2xl text-base focus:outline-none focus:border-accent focus:ring-4 focus:ring-accent/10 transition-all duration-200 placeholder-neutral-300"
             />
             <Search size={20} className="absolute left-5 top-1/2 -translate-y-1/2 text-neutral-400" />
+            {searchLocation && (
+              <button
+                onClick={() => setSearchLocation('')}
+                className="absolute right-5 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-600 transition-colors cursor-pointer"
+                aria-label="Clear search location"
+              >
+                <X size={20} />
+              </button>
+            )}
           </div>
         </div>
+
 
         {/* Filter chips */}
         <div className="mb-10 flex overflow-x-auto no-scrollbar md:flex-wrap gap-2 justify-start md:justify-center pb-2">
