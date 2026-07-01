@@ -13,3 +13,4 @@ export { FaqItem } from './FaqItem';
 export { StepCard } from './StepCard';
 export { TestimonialCard } from './TestimonialCard';
 export { ScrollToTop } from './ScrollToTop';
+export { Newsletter } from './Newsletter';

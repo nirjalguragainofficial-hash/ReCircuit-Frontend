@@ -1,4 +1,4 @@
-import { Navigation, Hero, HowItWorks, FindCenter, WhatWeAccept, Impact, Testimonials, FAQ, Footer, ScrollToTop } from './components';
+import { Navigation, Hero, HowItWorks, FindCenter, WhatWeAccept, Impact, Testimonials, FAQ, Newsletter, Footer, ScrollToTop } from './components';
 
 function App() {
   return (
@@ -28,6 +28,9 @@ function App() {
         
         {/* Frequently Asked Questions */}
         <FAQ />
+
+        {/* Newsletter subscription */}
+        <Newsletter />
       </main>
       
       {/* Page footer */}
