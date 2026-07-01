@@ -84,4 +84,54 @@ body {
     box-shadow: 0 0 0 3px rgba(0, 200, 117, 0.4);
     border-radius: 8px;
   }
+
+  /* Smooth reveal animation for sections */
+  .animate-reveal {
+    animation: reveal 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  @keyframes reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Pulsing glow for accent elements */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(0, 200, 117, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 20px 6px rgba(0, 200, 117, 0.15);
+    }
+  }
+
+  /* Gradient shimmer for premium CTA buttons */
+  .shimmer-btn {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+  }
 }
