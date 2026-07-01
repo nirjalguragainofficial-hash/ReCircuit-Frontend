@@ -53,9 +53,14 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-5">Platform</h4>
             <ul className="space-y-3">
-              {['Find a Center', 'Track Device', 'For Business', 'Pricing'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-sm text-neutral-400 hover:text-white transition-colors duration-200">{link}</a>
+              {[
+                { label: 'Find a Center', href: '#centers' },
+                { label: 'Track Device', href: '#works' },
+                { label: 'For Business', href: '#faq' },
+                { label: 'Pricing', href: '#faq' }
+              ].map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm text-neutral-400 hover:text-white transition-colors duration-200">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -65,9 +70,14 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-5">Company</h4>
             <ul className="space-y-3">
-              {['About Us', 'Blog', 'Careers', 'Contact'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-sm text-neutral-400 hover:text-white transition-colors duration-200">{link}</a>
+              {[
+                { label: 'About Us', href: '#footer' },
+                { label: 'Blog', href: '#home' },
+                { label: 'Careers', href: '#footer' },
+                { label: 'Contact', href: 'mailto:support@recircuit.com' }
+              ].map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm text-neutral-400 hover:text-white transition-colors duration-200">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -77,13 +87,19 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-5">Resources</h4>
             <ul className="space-y-3">
-              {['Help Center', 'Environmental Report', 'FAQs', 'Newsletter'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-sm text-neutral-400 hover:text-white transition-colors duration-200">{link}</a>
+              {[
+                { label: 'Help Center', href: '#faq' },
+                { label: 'Environmental Report', href: '#impact' },
+                { label: 'FAQs', href: '#faq' },
+                { label: 'Newsletter', href: '#newsletter' }
+              ].map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm text-neutral-400 hover:text-white transition-colors duration-200">{link.label}</a>
                 </li>
               ))}
             </ul>
           </div>
+
         </div>
 
         {/* Bottom bar */}
