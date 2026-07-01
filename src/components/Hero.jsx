@@ -64,7 +64,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
             <a
               href="#centers"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white font-bold text-base rounded-full shadow-lg hover:shadow-glow-accent hover:-translate-y-1 transition-all duration-300"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white font-bold text-base rounded-full shadow-lg hover:shadow-glow-accent hover:-translate-y-1 transition-all duration-300 shimmer-btn"
             >
               Find a Collection Center
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-200" />

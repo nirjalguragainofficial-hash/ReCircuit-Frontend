@@ -96,10 +96,11 @@ export function Navigation() {
         {/* Desktop CTA */}
         <a
           href="#centers"
-          className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-full shadow-sm hover:-translate-y-0.5 transition-all duration-200"
+          className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-full shadow-sm hover:shadow-glow-accent hover:-translate-y-0.5 transition-all duration-200 shimmer-btn"
         >
           Drop Off Now
         </a>
+
 
         {/* Mobile hamburger */}
         <MobileMenu />
