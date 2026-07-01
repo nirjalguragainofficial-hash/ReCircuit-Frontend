@@ -1,4 +1,4 @@
-import { Navigation, Hero, HowItWorks, FindCenter, WhatWeAccept, Impact, Testimonials, FAQ, Footer } from './components';
+import { Navigation, Hero, HowItWorks, FindCenter, WhatWeAccept, Impact, Testimonials, FAQ, Footer, ScrollToTop } from './components';
 
 function App() {
   return (
@@ -32,6 +32,9 @@ function App() {
       
       {/* Page footer */}
       <Footer />
+
+      {/* Scroll to top button */}
+      <ScrollToTop />
     </div>
   );
 }
