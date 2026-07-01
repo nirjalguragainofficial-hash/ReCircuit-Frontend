@@ -16,7 +16,8 @@ function MobileMenu() {
       <button
         onClick={() => setOpen(!open)}
         className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-neutral-100 transition-colors"
-        aria-label="Toggle menu"
+        aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
+        aria-expanded={open}
       >
         <span
           className="block w-5 h-0.5 bg-neutral-700 transition-all duration-200"
@@ -61,7 +62,7 @@ function MobileMenu() {
 
 export function Navigation() {
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-100 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-100 shadow-sm" aria-label="Main navigation">
       <div className="max-w-[1200px] mx-auto px-6 relative flex items-center justify-between py-4">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 flex-shrink-0 group no-underline">
@@ -74,7 +75,7 @@ export function Navigation() {
         </a>
 
         {/* Desktop nav links */}
-        <div className="hidden md:flex gap-8 items-center">
+        <div className="hidden md:flex gap-8 items-center" role="navigation" aria-label="Primary">
           {[
             { label: 'Home', href: '#home' },
             { label: 'Find a Center', href: '#centers' },
