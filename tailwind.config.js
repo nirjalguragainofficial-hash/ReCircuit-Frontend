@@ -7,14 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#1A7A4A',
-        'primary-lt': '#E8F5EE',
-        accent: '#00C875',
-        'neutral-900': '#111827',
-        'neutral-500': '#6B7280',
-        'neutral-100': '#F3F4F6',
-        'neutral-50': '#F9FAFB',
-        white: '#FFFFFF',
+        primary: 'var(--primary)',
+        'primary-lt': 'var(--primary-lt)',
+        accent: 'var(--accent)',
+        'neutral-900': 'var(--neutral-900)',
+        'neutral-500': 'var(--neutral-500)',
+        'neutral-100': 'var(--neutral-100)',
+        'neutral-50': 'var(--neutral-50)',
+        white: 'var(--white)',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
