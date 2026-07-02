@@ -1,15 +1,52 @@
 import { useState } from 'react';
-import { Mail, CheckCircle, ArrowRight } from 'lucide-react';
+import { Mail, CheckCircle, ArrowRight, Loader2, AlertCircle } from 'lucide-react';
 
 export function Newsletter() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const validateEmail = (emailStr) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(emailStr.toLowerCase());
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email.trim()) {
+    setErrorMessage('');
+
+    const trimmedEmail = email.trim();
+    if (!trimmedEmail) {
+      setErrorMessage('Email address is required.');
+      return;
+    }
+
+    if (!validateEmail(trimmedEmail)) {
+      setErrorMessage('Please enter a valid email address.');
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      // Simulate API call with 1.2s delay
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (trimmedEmail.toLowerCase() === 'error@recircuit.com') {
+            reject(new Error('This email is already registered.'));
+          } else {
+            resolve();
+          }
+        }, 1200);
+      });
+
       setIsSubscribed(true);
       setEmail('');
+    } catch (err) {
+      setErrorMessage(err.message || 'An error occurred. Please try again.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -44,7 +81,7 @@ export function Newsletter() {
             {/* Right form */}
             <div className="w-full md:w-auto md:min-w-[380px]">
               {isSubscribed ? (
-                <div className="flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
+                <div className="flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 animate-reveal">
                   <CheckCircle size={28} className="text-white flex-shrink-0" />
                   <div>
                     <p className="text-white font-bold text-lg">You're subscribed!</p>
@@ -52,23 +89,44 @@ export function Newsletter() {
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    aria-label="Email address for newsletter"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="flex-1 px-5 py-4 bg-white/95 border-2 border-white rounded-xl text-neutral-900 text-base placeholder-neutral-400 focus:outline-none focus:ring-4 focus:ring-white/30 transition-all duration-200"
-                  />
-                  <button
-                    type="submit"
-                    className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-neutral-900 text-white font-bold text-sm rounded-xl hover:bg-neutral-800 hover:-translate-y-0.5 transition-all duration-200 shadow-lg whitespace-nowrap"
-                  >
-                    Subscribe <ArrowRight size={16} />
-                  </button>
-                </form>
+                <div className="flex flex-col gap-2">
+                  <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+                    <input
+                      type="email"
+                      placeholder="Enter your email address"
+                      aria-label="Email address for newsletter"
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        if (errorMessage) setErrorMessage('');
+                      }}
+                      disabled={isLoading}
+                      required
+                      className="flex-1 px-5 py-4 bg-white/95 border-2 border-white rounded-xl text-neutral-900 text-base placeholder-neutral-400 focus:outline-none focus:ring-4 focus:ring-white/30 transition-all duration-200 disabled:opacity-70"
+                    />
+                    <button
+                      type="submit"
+                      disabled={isLoading}
+                      className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-neutral-900 text-white font-bold text-sm rounded-xl hover:bg-neutral-800 hover:-translate-y-0.5 transition-all duration-200 shadow-lg whitespace-nowrap disabled:opacity-75 disabled:pointer-events-none"
+                    >
+                      {isLoading ? (
+                        <>
+                          Subscribing <Loader2 size={16} className="animate-spin" />
+                        </>
+                      ) : (
+                        <>
+                          Subscribe <ArrowRight size={16} />
+                        </>
+                      )}
+                    </button>
+                  </form>
+                  {errorMessage && (
+                    <div className="flex items-center gap-2 text-rose-100 bg-rose-500/20 px-4 py-2.5 rounded-xl text-xs border border-rose-500/30 animate-reveal">
+                      <AlertCircle size={14} className="text-rose-200 flex-shrink-0" />
+                      <span>{errorMessage}</span>
+                    </div>
+                  )}
+                </div>
               )}
               <p className="text-white/60 text-xs mt-3 text-center md:text-left">
                 No spam, unsubscribe anytime. We respect your privacy.
@@ -80,3 +138,4 @@ export function Newsletter() {
     </section>
   );
 }
+
