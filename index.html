@@ -9,6 +9,9 @@
     <meta name="author" content="ReCircuit" />
     <meta name="theme-color" content="#1a7a4a" />
 
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://recircuit.com" />
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="ReCircuit - Responsible E-Waste Recycling" />
@@ -20,6 +23,19 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ReCircuit - Responsible E-Waste Recycling" />
     <meta name="twitter:description" content="Find certified e-waste collection centers near you and give your old electronics a second life." />
+
+    <!-- Dark Mode Initializer Script -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
 
     <title>ReCircuit - Responsible E-Waste Recycling</title>
   </head>
