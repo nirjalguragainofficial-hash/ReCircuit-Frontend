@@ -6,18 +6,27 @@ import { mockCenters } from '../data/mockData';
 export function FindCenter() {
   const [searchLocation, setSearchLocation] = useState('');
   const [activeFilter, setActiveFilter] = useState('All');
+  const [sortBy, setSortBy] = useState('default');
 
   const filters = ['All', 'Phones', 'Laptops', 'TVs', 'Batteries', 'Appliances'];
 
   const filteredCenters = useMemo(() => {
-    return mockCenters.filter((center) => {
+    let result = mockCenters.filter((center) => {
       const matchesLocation = center.address.toLowerCase().includes(searchLocation.toLowerCase());
       const matchesFilter = activeFilter === 'All' || center.acceptedItems.some((item) =>
         item.toLowerCase().includes(activeFilter.toLowerCase())
       );
       return matchesLocation && matchesFilter;
     });
-  }, [searchLocation, activeFilter]);
+
+    if (sortBy === 'distance') {
+      result = [...result].sort((a, b) => parseFloat(a.distance) - parseFloat(b.distance));
+    } else if (sortBy === 'rating') {
+      result = [...result].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    }
+
+    return result;
+  }, [searchLocation, activeFilter, sortBy]);
 
   return (
     <section id="centers" className="bg-white py-24 md:py-32">
@@ -58,7 +67,6 @@ export function FindCenter() {
           </div>
         </div>
 
-
         {/* Filter chips */}
         <div className="mb-10 flex overflow-x-auto no-scrollbar md:flex-wrap gap-2 justify-start md:justify-center pb-2">
           {filters.map((filter) => (
@@ -76,12 +84,30 @@ export function FindCenter() {
           ))}
         </div>
 
-        {/* Results count */}
-        <div className="flex items-center gap-2 mb-6">
-          <MapPin size={16} className="text-accent" />
-          <p className="text-sm font-medium text-neutral-500">
-            Showing <span className="text-neutral-900 font-bold">{filteredCenters.length}</span> center{filteredCenters.length !== 1 ? 's' : ''}
-          </p>
+        {/* Results count & Sort */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 border-b border-neutral-100 pb-4">
+          <div className="flex items-center gap-2">
+            <MapPin size={16} className="text-accent" />
+            <p className="text-sm font-medium text-neutral-500">
+              Showing <span className="text-neutral-900 font-bold">{filteredCenters.length}</span> center{filteredCenters.length !== 1 ? 's' : ''}
+            </p>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <label htmlFor="sort-select" className="text-xs font-bold uppercase tracking-wider text-neutral-400">
+              Sort By:
+            </label>
+            <select
+              id="sort-select"
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="bg-neutral-50 border border-neutral-200 text-neutral-700 text-sm font-semibold rounded-xl px-3 py-1.5 focus:outline-none focus:border-accent transition-colors"
+            >
+              <option value="default">Featured</option>
+              <option value="distance">Distance (Nearest First)</option>
+              <option value="rating">Rating (Highest First)</option>
+            </select>
+          </div>
         </div>
 
         {/* Centers grid */}
