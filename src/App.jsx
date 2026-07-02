@@ -1,4 +1,4 @@
-import { Navigation, Hero, HowItWorks, FindCenter, WhatWeAccept, Impact, Testimonials, FAQ, Newsletter, Footer, ScrollToTop } from './components';
+import { Navigation, Hero, HowItWorks, FindCenter, WhatWeAccept, Impact, ImpactCalculator, Testimonials, FAQ, Newsletter, Footer, ScrollToTop } from './components';
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <Navigation />
       
       {/* Page sections */}
+      {/* @ts-ignore */}
       <main>
         {/* Hero section */}
         <Hero />
@@ -22,12 +23,16 @@ function App() {
         
         {/* Impact numbers / counters */}
         <Impact />
+
+        {/* E-waste impact calculator */}
+        <ImpactCalculator />
         
         {/* Customer testimonials */}
         <Testimonials />
         
         {/* Frequently Asked Questions */}
         <FAQ />
+
 
         {/* Newsletter subscription */}
         <Newsletter />

@@ -14,3 +14,4 @@ export { StepCard } from './StepCard';
 export { TestimonialCard } from './TestimonialCard';
 export { ScrollToTop } from './ScrollToTop';
 export { Newsletter } from './Newsletter';
+export { ImpactCalculator } from './ImpactCalculator';
