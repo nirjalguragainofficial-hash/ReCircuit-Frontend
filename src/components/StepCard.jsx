@@ -7,9 +7,9 @@ const iconMap = {
 };
 
 const stepColors = [
-  { bg: 'bg-blue-50', icon: 'text-blue-500', border: 'border-blue-100', num: 'bg-blue-500' },
-  { bg: 'bg-emerald-50', icon: 'text-emerald-500', border: 'border-emerald-100', num: 'bg-emerald-500' },
-  { bg: 'bg-violet-50', icon: 'text-violet-500', border: 'border-violet-100', num: 'bg-violet-500' },
+  { bg: 'bg-blue-50 dark:bg-blue-950/30', icon: 'text-blue-500 dark:text-blue-400', border: 'border-blue-100 dark:border-blue-900/40', num: 'bg-blue-500' },
+  { bg: 'bg-emerald-50 dark:bg-emerald-950/30', icon: 'text-emerald-500 dark:text-emerald-400', border: 'border-emerald-100 dark:border-emerald-900/40', num: 'bg-emerald-500' },
+  { bg: 'bg-violet-50 dark:bg-violet-950/30', icon: 'text-violet-500 dark:text-violet-400', border: 'border-violet-100 dark:border-violet-900/40', num: 'bg-violet-500' },
 ];
 
 export function StepCard({ step, index }) {
