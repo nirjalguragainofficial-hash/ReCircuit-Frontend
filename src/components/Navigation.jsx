@@ -91,7 +91,7 @@ export function Navigation() {
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-100 shadow-sm" aria-label="Main navigation">
       <div className="max-w-[1200px] mx-auto px-6 relative flex items-center justify-between py-4">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 flex-shrink-0 group no-underline">
+        <a href="#home" className="flex items-center gap-2 flex-shrink-0 group no-underline focus-ring p-1 rounded-lg">
           <div className="w-9 h-9 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-200">
             <Cpu size={20} className="text-white" strokeWidth={2} />
           </div>
@@ -112,7 +112,7 @@ export function Navigation() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-neutral-500 hover:text-primary transition-colors duration-200"
+              className="text-sm font-medium text-neutral-500 hover:text-primary transition-colors duration-200 focus-ring px-2 py-1"
             >
               {link.label}
             </a>
@@ -123,7 +123,7 @@ export function Navigation() {
         <div className="hidden md:flex items-center gap-4">
           <button
             onClick={toggleDarkMode}
-            className="p-2.5 text-neutral-500 hover:text-accent rounded-xl hover:bg-neutral-50 border border-transparent hover:border-neutral-200/60 transition-all duration-200 cursor-pointer"
+            className="p-2.5 text-neutral-500 hover:text-accent rounded-xl hover:bg-neutral-50 border border-transparent hover:border-neutral-200/60 transition-all duration-200 cursor-pointer focus-ring"
             aria-label="Toggle Dark Mode"
           >
             {isDarkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} />}
@@ -140,7 +140,7 @@ export function Navigation() {
         <div className="flex md:hidden items-center gap-2">
           <button
             onClick={toggleDarkMode}
-            className="p-2.5 text-neutral-500 hover:text-accent rounded-xl hover:bg-neutral-50 border border-transparent hover:border-neutral-200/60 transition-all duration-200 cursor-pointer"
+            className="p-2.5 text-neutral-500 hover:text-accent rounded-xl hover:bg-neutral-50 border border-transparent hover:border-neutral-200/60 transition-all duration-200 cursor-pointer focus-ring"
             aria-label="Toggle Dark Mode"
           >
             {isDarkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} />}
