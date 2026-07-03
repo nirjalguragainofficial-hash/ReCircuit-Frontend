@@ -123,7 +123,7 @@ export function Navigation() {
         <div className="hidden md:flex items-center gap-4">
           <button
             onClick={toggleDarkMode}
-            className="p-2.5 text-neutral-500 hover:text-accent rounded-xl hover:bg-neutral-50 border border-transparent hover:border-neutral-200/60 transition-all duration-200 cursor-pointer focus-ring"
+            className="p-2.5 text-neutral-500 hover:text-accent rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-800 border border-transparent hover:border-neutral-200/60 dark:hover:border-neutral-700/50 transition-all duration-200 cursor-pointer focus-ring"
             aria-label="Toggle Dark Mode"
           >
             {isDarkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} />}
@@ -140,7 +140,7 @@ export function Navigation() {
         <div className="flex md:hidden items-center gap-2">
           <button
             onClick={toggleDarkMode}
-            className="p-2.5 text-neutral-500 hover:text-accent rounded-xl hover:bg-neutral-50 border border-transparent hover:border-neutral-200/60 transition-all duration-200 cursor-pointer focus-ring"
+            className="p-2.5 text-neutral-500 hover:text-accent rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-800 border border-transparent hover:border-neutral-200/60 dark:hover:border-neutral-700/50 transition-all duration-200 cursor-pointer focus-ring"
             aria-label="Toggle Dark Mode"
           >
             {isDarkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} />}
