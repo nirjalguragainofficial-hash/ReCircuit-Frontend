@@ -11,9 +11,9 @@ export function CenterCard({ center }) {
         <div className="flex items-start justify-between mb-4">
           <h3 className="text-lg font-bold text-neutral-900 flex-1 pr-3 leading-snug">{center.name}</h3>
           {center.certified && (
-            <div className="flex items-center gap-1 flex-shrink-0 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full">
-              <CheckCircle size={13} className="text-emerald-600" />
-              <span className="text-xs font-bold text-emerald-700 uppercase tracking-wide">Certified</span>
+            <div className="flex items-center gap-1 flex-shrink-0 bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900/50 px-2.5 py-1 rounded-full">
+              <CheckCircle size={13} className="text-emerald-600 dark:text-emerald-400" />
+              <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wide">Certified</span>
             </div>
           )}
         </div>
@@ -52,7 +52,7 @@ export function CenterCard({ center }) {
           <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">Accepts</p>
           <div className="flex flex-wrap gap-1.5">
             {center.acceptedItems.map((item, idx) => (
-              <span key={idx} className="inline-block bg-primary/8 text-primary px-2.5 py-0.5 rounded-full text-xs font-semibold">
+              <span key={idx} className="inline-block bg-primary/8 dark:bg-emerald-500/10 text-primary px-2.5 py-0.5 rounded-full text-xs font-semibold">
                 {item}
               </span>
             ))}
@@ -60,7 +60,7 @@ export function CenterCard({ center }) {
         </div>
 
         {/* Action buttons */}
-        <div className="flex gap-2 mt-auto pt-4 border-t border-neutral-50">
+        <div className="flex gap-2 mt-auto pt-4 border-t border-neutral-100">
           <button className="flex-1 px-3 py-2 border-2 border-primary/20 text-primary rounded-xl font-semibold text-sm hover:bg-primary-lt hover:border-primary transition-all duration-200">
             Directions
           </button>
