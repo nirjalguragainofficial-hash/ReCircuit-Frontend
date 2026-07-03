@@ -20,15 +20,15 @@ function MobileMenu() {
         aria-expanded={open}
       >
         <span
-          className="block w-5 h-0.5 bg-neutral-700 transition-all duration-200"
+          className="block w-5 h-0.5 bg-neutral-900 transition-all duration-200"
           style={{ transform: open ? 'rotate(45deg) translateY(8px)' : 'none' }}
         ></span>
         <span
-          className="block w-5 h-0.5 bg-neutral-700 transition-all duration-200"
+          className="block w-5 h-0.5 bg-neutral-900 transition-all duration-200"
           style={{ opacity: open ? 0 : 1 }}
         ></span>
         <span
-          className="block w-5 h-0.5 bg-neutral-700 transition-all duration-200"
+          className="block w-5 h-0.5 bg-neutral-900 transition-all duration-200"
           style={{ transform: open ? 'rotate(-45deg) translateY(-8px)' : 'none' }}
         ></span>
       </button>
@@ -40,7 +40,7 @@ function MobileMenu() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-base font-medium text-neutral-600 hover:text-primary transition-colors"
+                className="text-base font-medium text-neutral-500 hover:text-primary dark:text-neutral-400 dark:hover:text-primary transition-colors"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
