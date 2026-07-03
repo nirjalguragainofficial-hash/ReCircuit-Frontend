@@ -4,7 +4,7 @@ export function TestimonialCard({ testimonial }) {
   return (
     <div className="group bg-white border border-neutral-100 rounded-2xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col relative overflow-hidden">
       {/* Quote icon watermark */}
-      <Quote size={60} className="absolute top-4 right-4 text-neutral-50 rotate-180 pointer-events-none" />
+      <Quote size={60} className="absolute top-4 right-4 text-neutral-50 dark:text-neutral-800/30 rotate-180 pointer-events-none" />
 
       {/* Stars */}
       <div className="flex gap-1 mb-4" aria-label={`Rating: ${testimonial.rating} out of 5 stars`}>
@@ -18,7 +18,7 @@ export function TestimonialCard({ testimonial }) {
       </div>
 
       {/* Quote */}
-      <p className="text-base text-neutral-600 mb-6 italic leading-relaxed flex-1 relative z-10">
+      <p className="text-base text-neutral-600 dark:text-neutral-300 mb-6 italic leading-relaxed flex-1 relative z-10">
         "{testimonial.quote}"
       </p>
 

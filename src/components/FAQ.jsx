@@ -8,7 +8,7 @@ export function FAQ() {
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-violet-50 text-violet-600 text-xs font-bold uppercase tracking-widest rounded-full mb-4">FAQ</span>
+          <span className="inline-block px-4 py-1.5 bg-violet-50 dark:bg-violet-950/40 text-violet-600 dark:text-violet-300 text-xs font-bold uppercase tracking-widest rounded-full mb-4">FAQ</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-900 mb-4 tracking-tight">
             Common <span className="text-gradient-green">Questions</span>
           </h2>

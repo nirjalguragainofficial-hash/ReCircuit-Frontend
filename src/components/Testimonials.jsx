@@ -7,7 +7,7 @@ export function Testimonials() {
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 text-xs font-bold uppercase tracking-widest rounded-full mb-4">Testimonials</span>
+          <span className="inline-block px-4 py-1.5 bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-300 text-xs font-bold uppercase tracking-widest rounded-full mb-4">Testimonials</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-900 mb-4 tracking-tight">
             Trusted by <span className="text-gradient-green">Conscious Consumers</span>
           </h2>
