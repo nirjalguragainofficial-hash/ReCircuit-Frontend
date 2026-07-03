@@ -66,7 +66,7 @@ export function Footer() {
                 { label: 'Pricing', href: '#faq' }
               ].map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-neutral-400 hover:text-white transition-colors duration-200">{link.label}</a>
+                  <a href={link.href} className="text-sm text-neutral-400 hover:text-white transition-colors duration-200 focus-ring px-1.5 py-0.5 -mx-1.5 rounded">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -83,7 +83,7 @@ export function Footer() {
                 { label: 'Contact', href: 'mailto:support@recircuit.com' }
               ].map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-neutral-400 hover:text-white transition-colors duration-200">{link.label}</a>
+                  <a href={link.href} className="text-sm text-neutral-400 hover:text-white transition-colors duration-200 focus-ring px-1.5 py-0.5 -mx-1.5 rounded">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -100,7 +100,7 @@ export function Footer() {
                 { label: 'Newsletter', href: '#newsletter' }
               ].map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-neutral-400 hover:text-white transition-colors duration-200">{link.label}</a>
+                  <a href={link.href} className="text-sm text-neutral-400 hover:text-white transition-colors duration-200 focus-ring px-1.5 py-0.5 -mx-1.5 rounded">{link.label}</a>
                 </li>
               ))}
             </ul>
