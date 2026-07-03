@@ -37,11 +37,17 @@ export function Footer() {
               Connecting people with certified e-waste collection centers for a cleaner, greener planet.
             </p>
             <div className="flex gap-3">
-              {[Twitter, Linkedin, Instagram].map((Icon, i) => (
+              {[
+                { Icon: Twitter, name: 'Twitter' },
+                { Icon: Linkedin, name: 'LinkedIn' },
+                { Icon: Instagram, name: 'Instagram' }
+              ].map(({ Icon, name }) => (
                 <a
-                  key={i}
+                  key={name}
                   href="#"
-                  className="w-9 h-9 bg-neutral-800 text-neutral-400 rounded-lg flex items-center justify-center hover:bg-accent hover:text-white transition-all duration-200"
+                  aria-label={`Follow ReCircuit on ${name}`}
+                  title={`Follow ReCircuit on ${name}`}
+                  className="w-9 h-9 bg-neutral-800 text-neutral-400 rounded-lg flex items-center justify-center hover:bg-accent hover:text-white transition-all duration-200 focus-ring"
                 >
                   <Icon size={16} />
                 </a>
