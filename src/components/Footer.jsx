@@ -112,9 +112,9 @@ export function Footer() {
         <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-neutral-500">© {currentYear} ReCircuit. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="text-sm text-neutral-500 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-sm text-neutral-500 hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="text-sm text-neutral-500 hover:text-white transition-colors">Cookie Policy</a>
+            <a href="#" className="text-sm text-neutral-500 hover:text-white transition-colors focus-ring">Privacy Policy</a>
+            <a href="#" className="text-sm text-neutral-500 hover:text-white transition-colors focus-ring">Terms of Service</a>
+            <a href="#" className="text-sm text-neutral-500 hover:text-white transition-colors focus-ring">Cookie Policy</a>
           </div>
         </div>
       </div>
