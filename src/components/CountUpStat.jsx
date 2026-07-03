@@ -35,7 +35,12 @@ export function CountUpStat({ number, unit, label, icon: Icon }) {
   }, [isVisible, number]);
 
   return (
-    <div ref={ref} className="group flex flex-col items-center text-center p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+    <div
+      ref={ref}
+      role="status"
+      aria-live="polite"
+      className="group flex flex-col items-center text-center p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+    >
       {Icon && (
         <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
           <Icon size={22} className="text-accent" strokeWidth={1.5} />
