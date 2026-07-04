@@ -105,6 +105,7 @@ body, nav, section, input, select, button, footer {
 
   /* Smooth reveal animation for sections */
   .animate-reveal {
+    /* Triggers transition on mount with ease-out curve */
     animation: reveal 0.8s ease-out forwards;
     opacity: 0;
     transform: translateY(24px);
