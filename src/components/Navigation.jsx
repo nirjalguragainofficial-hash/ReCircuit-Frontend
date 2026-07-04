@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Cpu, Sun, Moon } from 'lucide-react';
 
 function MobileMenu() {
+  // open state tracks if the mobile navigation menu overlay is visible
   const [open, setOpen] = useState(false);
   const links = [
     { label: 'Home', href: '#home' },
