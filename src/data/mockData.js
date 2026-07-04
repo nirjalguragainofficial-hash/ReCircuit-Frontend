@@ -1,3 +1,4 @@
+// Mock data representing e-waste drop-off centers, testimonials, how-it-works steps, and FAQs.
 export const mockCenters = [
   {
     id: 1,
