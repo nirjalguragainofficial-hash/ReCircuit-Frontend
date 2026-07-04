@@ -10,6 +10,7 @@ export function FindCenter() {
 
   const filters = ['All', 'Phones', 'Laptops', 'TVs', 'Batteries', 'Appliances'];
 
+  // Compute filtered and sorted drop-off centers list dynamically based on search, filter, and sorting states
   const filteredCenters = useMemo(() => {
     let result = mockCenters.filter((center) => {
       const matchesLocation = center.address.toLowerCase().includes(searchLocation.toLowerCase());
