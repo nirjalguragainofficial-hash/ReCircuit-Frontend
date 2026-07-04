@@ -6,6 +6,7 @@ const iconMap = {
   BarChart3: BarChart3,
 };
 
+// Sequential color mappings matching step numbers for step cards
 const stepColors = [
   { bg: 'bg-blue-50 dark:bg-blue-950/30', icon: 'text-blue-500 dark:text-blue-400', border: 'border-blue-100 dark:border-blue-900/40', num: 'bg-blue-500' },
   { bg: 'bg-emerald-50 dark:bg-emerald-950/30', icon: 'text-emerald-500 dark:text-emerald-400', border: 'border-emerald-100 dark:border-emerald-900/40', num: 'bg-emerald-500' },
