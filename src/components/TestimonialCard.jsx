@@ -1,5 +1,6 @@
 import { Star, Quote } from 'lucide-react';
 
+// Renders an individual customer review card with star ratings, quote text, and user initials avatar.
 export function TestimonialCard({ testimonial }) {
   return (
     <div className="group bg-white border border-neutral-100 rounded-2xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col relative overflow-hidden">
