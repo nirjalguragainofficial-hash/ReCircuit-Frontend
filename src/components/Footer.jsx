@@ -37,6 +37,7 @@ export function Footer() {
               Connecting people with certified e-waste collection centers for a cleaner, greener planet.
             </p>
             <div className="flex gap-3">
+              {/* Map of social profile icons and their respective aria-label names */}
               {[
                 { Icon: Twitter, name: 'Twitter' },
                 { Icon: Linkedin, name: 'LinkedIn' },
