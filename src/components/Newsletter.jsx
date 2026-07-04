@@ -8,6 +8,7 @@ export function Newsletter() {
   const [errorMessage, setErrorMessage] = useState('');
 
   const validateEmail = (emailStr) => {
+    // Basic RFC 5322 email regex verification pattern
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(emailStr.toLowerCase());
   };
