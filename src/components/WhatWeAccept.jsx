@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Smartphone, Laptop, Tablet, Monitor, Printer, Keyboard, Lightbulb, Battery, Tv, Gamepad2, Camera, Wifi, ChevronDown, CheckCircle2 } from 'lucide-react';
+import { Smartphone, Laptop, Tablet, Monitor, Printer, Keyboard, Lightbulb, Battery, Tv, Gamepad2, Camera, Wifi, ChevronDown, CheckCircle2, Scissors, Plug } from 'lucide-react';
 
 const iconMap = {
   Smartphone, Laptop, Tablet, Monitor, Printer, Keyboard,
-  Lightbulb, Battery, Tv, Gamepad2, Camera, Wifi,
+  Lightbulb, Battery, Tv, Gamepad2, Camera, Wifi, Scissors, Plug
 };
 
 const categoryIcons = {
