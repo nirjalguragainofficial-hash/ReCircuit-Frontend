@@ -76,6 +76,8 @@ export const acceptedItems = [
   { name: 'Game Consoles', category: 'Gaming' },
   { name: 'Cameras', category: 'Photography' },
   { name: 'Routers & Modems', category: 'Networking' },
+  { name: 'Trimmers', category: 'Appliances' },
+  { name: 'Charger Adaptor', category: 'Accessories' },
 ];
 
 export const testimonials = [
