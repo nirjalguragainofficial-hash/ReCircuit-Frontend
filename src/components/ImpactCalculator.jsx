@@ -56,6 +56,15 @@ const ITEMS = [
     copper: 15,
     hazardous: 8,
   },
+  {
+    id: 'adaptor',
+    name: 'Charger Adaptors',
+    icon: '⚡',
+    co2: 8,
+    gold: 2,
+    copper: 10,
+    hazardous: 3,
+  },
 ];
 
 export function ImpactCalculator() {
