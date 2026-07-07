@@ -19,6 +19,8 @@ const categoryIcons = {
   'Game Consoles': 'Gamepad2',
   'Cameras': 'Camera',
   'Routers & Modems': 'Wifi',
+  'Trimmers': 'Scissors',
+  'Charger Adaptor': 'Plug',
 };
 
 const extraItems = [
