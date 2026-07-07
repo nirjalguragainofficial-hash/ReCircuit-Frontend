@@ -144,7 +144,7 @@ export function ImpactCalculator() {
               )}
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 max-h-[480px] overflow-y-auto pr-2 custom-scrollbar">
               {ITEMS.map((item) => {
                 const qty = quantities[item.id] || 0;
                 return (
