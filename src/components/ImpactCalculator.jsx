@@ -47,6 +47,15 @@ const ITEMS = [
     copper: 30,
     hazardous: 5,
   },
+  {
+    id: 'trimmer',
+    name: 'Electric Trimmers',
+    icon: '🪒',
+    co2: 18,
+    gold: 8,
+    copper: 15,
+    hazardous: 8,
+  },
 ];
 
 export function ImpactCalculator() {
