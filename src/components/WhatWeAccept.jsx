@@ -24,7 +24,7 @@ const categoryIcons = {
 const extraItems = [
   'Desktop Computers', 'External Hard Drives', 'USB Flash Drives',
   'Headphones', 'Smartwatches', 'Microwave Ovens', 'E-Readers',
-  'Power Banks', 'Smart Speakers', 'VR Headsets',
+  'Power Banks', 'Smart Speakers', 'VR Headsets', 'Trimmers', 'Charger Adaptor',
 ];
 
 export function WhatWeAccept() {
