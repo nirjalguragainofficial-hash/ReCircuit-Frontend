@@ -1,16 +1,67 @@
-# ReCircuit Frontend
+# ReCircuit — E-Waste Recycling Frontend
 
-ReCircuit is an e-waste recycling platform built with React and Vite. It helps users find certified e-waste collection centers nearby.
+ReCircuit is a modern e-waste recycling platform built with **React + Vite + Tailwind CSS**. It connects users with certified e-waste collection centers nearby and encourages responsible electronics disposal.
 
-Currently, two official plugins are available:
+## 🌱 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Find a Center** — Locate certified e-waste drop-off centers near you
+- **What We Accept** — Browse accepted device categories
+- **How It Works** — Step-by-step recycling guide
+- **Impact Calculator** — Track your environmental contribution
+- **Testimonials** — Real stories from responsible recyclers
+- **FAQ** — Frequently asked questions
+- **Newsletter** — Subscribe for recycling tips and updates
+- **Dark Mode** — Full dark/light theme toggle with persistence
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React 19](https://react.dev/) — UI library
+- [Vite](https://vitejs.dev/) — Lightning-fast build tool
+- [Tailwind CSS v4](https://tailwindcss.com/) — Utility-first CSS framework
+- [Lucide React](https://lucide.dev/) — Icon library
+- [Oxlint](https://oxc.rs/) — Fast JavaScript linter
 
-## Expanding the Oxlint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 🗂️ Project Structure
+
+```
+src/
+├── components/
+│   ├── Navigation.jsx       # Sticky top nav with dark mode toggle
+│   ├── Hero.jsx             # Landing hero section with stats bar
+│   ├── FindCenter.jsx       # Center locator with search/filter
+│   ├── WhatWeAccept.jsx     # Accepted device categories
+│   ├── HowItWorks.jsx       # Step-by-step guide
+│   ├── Impact.jsx           # Environmental impact metrics
+│   ├── ImpactCalculator.jsx # Interactive impact calculator
+│   ├── Testimonials.jsx     # User testimonials carousel
+│   ├── FAQ.jsx              # Accordion FAQ section
+│   ├── Newsletter.jsx       # Email subscription form
+│   ├── Footer.jsx           # Site footer with links
+│   └── ScrollToTop.jsx      # Scroll to top button
+├── index.css                # Global styles & Tailwind config
+└── main.jsx                 # App entry point
+```
+
+## 🌍 Environmental Mission
+
+ReCircuit aims to reduce e-waste landfill contribution by making certified recycling centers easily accessible to everyone. Every device recycled through our platform is tracked and reported to ensure responsible disposal.
+
+## 📄 License
+
+MIT © ReCircuit Team
