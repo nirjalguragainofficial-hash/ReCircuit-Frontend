@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Cpu, Sun, Moon } from 'lucide-react';
 
+/**
+ * MobileMenu renders a hamburger button that toggles an overlay
+ * navigation menu for small-screen viewports.
+ */
 function MobileMenu() {
   // open state tracks if the mobile navigation menu overlay is visible
   const [open, setOpen] = useState(false);
@@ -61,6 +65,11 @@ function MobileMenu() {
   );
 }
 
+/**
+ * Navigation — sticky top bar with logo, desktop nav links,
+ * dark mode toggle, and mobile hamburger menu.
+ * Persists dark mode preference to localStorage.
+ */
 export function Navigation() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
