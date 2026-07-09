@@ -1,7 +1,12 @@
 import { ArrowRight, Leaf } from 'lucide-react';
 
+/**
+ * Decorative SVG circuit board pattern rendered as a background overlay.
+ * Purely visual — hidden from assistive technologies via aria-hidden.
+ */
 const CircuitPattern = () => (
   <svg
+    aria-hidden="true"
     className="absolute inset-0 w-full h-full pointer-events-none"
     viewBox="0 0 1200 700"
     xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +37,10 @@ const CircuitPattern = () => (
   </svg>
 );
 
+/**
+ * Hero section — the main landing area of ReCircuit.
+ * Displays the headline, CTA buttons, and a stats summary bar.
+ */
 export function Hero() {
   return (
     <section id="home" className="relative bg-white overflow-hidden">
