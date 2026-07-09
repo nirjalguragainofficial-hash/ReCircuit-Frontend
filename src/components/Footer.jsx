@@ -1,5 +1,10 @@
 import { Cpu, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
 
+/**
+ * Footer — site-wide footer with CTA banner, navigation links,
+ * social media icons, and legal links.
+ * Automatically displays the current year in the copyright notice.
+ */
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -37,7 +42,7 @@ export function Footer() {
               Connecting people with certified e-waste collection centers for a cleaner, greener planet.
             </p>
             <div className="flex gap-3">
-              {/* Map of social profile icons and their respective aria-label names */}
+              {/* Social icon list: each entry maps to an anchor with accessible aria-label */}
               {[
                 { Icon: Twitter, name: 'Twitter' },
                 { Icon: Linkedin, name: 'LinkedIn' },
