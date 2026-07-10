@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Smartphone, Laptop, Tablet, Monitor, Printer, Keyboard, Lightbulb, Battery, Tv, Gamepad2, Camera, Wifi, ChevronDown, CheckCircle2, Scissors, Plug } from 'lucide-react';
+import { Smartphone, Laptop, Tablet, Monitor, Printer, Keyboard, Plug2, Battery, Tv, Gamepad2, Camera, Wifi, ChevronDown, CheckCircle2, Scissors, Plug } from 'lucide-react';
 
 const iconMap = {
   Smartphone, Laptop, Tablet, Monitor, Printer, Keyboard,
-  Lightbulb, Battery, Tv, Gamepad2, Camera, Wifi, Scissors, Plug
+  Plug2, Battery, Tv, Gamepad2, Camera, Wifi, Scissors, Plug
 };
 
 const categoryIcons = {
@@ -13,7 +13,7 @@ const categoryIcons = {
   'Monitors': 'Monitor',
   'Printers': 'Printer',
   'Keyboards': 'Keyboard',
-  'Cables & Chargers': 'Lightbulb',
+  'Cables & Chargers': 'Plug2',
   'Batteries': 'Battery',
   'TVs': 'Tv',
   'Game Consoles': 'Gamepad2',
@@ -29,6 +29,10 @@ const extraItems = [
   'Power Banks', 'Smart Speakers', 'VR Headsets', 'Trimmers', 'Charger Adaptor',
 ];
 
+/**
+ * WhatWeAccept — Displays a grid of accepted e-waste categories.
+ * Shows the primary 14 categories and toggles a full item list on demand.
+ */
 export function WhatWeAccept() {
   const [showMore, setShowMore] = useState(false);
 
