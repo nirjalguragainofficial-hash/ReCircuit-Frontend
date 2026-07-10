@@ -105,6 +105,14 @@ export const testimonials = [
     rating: 4,
     quote: 'Finally, a straightforward way to recycle electronics without guilt. The center staff knew exactly what to do with my old devices.',
   },
+  {
+    id: 4,
+    initials: 'PB',
+    name: 'Prakash Bhattarai',
+    city: 'Pokhara, Nepal',
+    rating: 5,
+    quote: 'Dropped off three old laptops and a broken TV. The process was smooth, and I received a recycling certificate the same day. Highly recommend!',
+  },
 ];
 
 export const faqItems = [
@@ -137,6 +145,11 @@ export const faqItems = [
     id: 6,
     question: 'What happens to the materials after recycling?',
     answer: 'Recovered materials are sold to manufacturers and commodity traders. Precious metals like gold and silver are extracted and reused in new electronics. Plastics are processed into pellets for manufacturing. Glass and other materials are used in construction or refabricated. About 98% of materials are recovered and reused.',
+  },
+  {
+    id: 7,
+    question: 'Do you offer home or office pickup services?',
+    answer: 'Yes! We offer scheduled home pickups for individuals with large quantities of e-waste (5+ items) and dedicated office pickup services for businesses. To book a pickup, use the \'Book Pickup\' option on our website or call our helpline. Pickup slots are typically available within 2-3 business days.',
   },
 ];
 
