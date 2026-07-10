@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { Mail, CheckCircle, ArrowRight, Loader2, AlertCircle } from 'lucide-react';
 
+/**
+ * Newsletter — Email subscription section.
+ * Validates the email client-side, simulates an async API call,
+ * and shows success or error feedback to the user.
+ */
 export function Newsletter() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
