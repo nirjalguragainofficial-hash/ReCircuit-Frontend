@@ -67,6 +67,11 @@ const ITEMS = [
   },
 ];
 
+/**
+ * ImpactCalculator — Interactive e-waste impact calculator.
+ * Lets users select quantities of devices and see estimated CO₂ savings,
+ * materials recovered, and hazardous materials safely diverted.
+ */
 export function ImpactCalculator() {
   const [quantities, setQuantities] = useState(
     ITEMS.reduce((acc, item) => ({ ...acc, [item.id]: 0 }), {})
@@ -171,6 +176,7 @@ export function ImpactCalculator() {
                     <div className="flex items-center gap-3">
                       <button
                         onClick={() => updateQuantity(item.id, -1)}
+                        aria-label={`Decrease ${item.name} quantity`}
                         className={`w-9 h-9 flex items-center justify-center rounded-xl font-bold text-lg transition-all duration-200 select-none border ${
                           qty > 0
                             ? 'bg-white border-neutral-200 text-neutral-800 hover:bg-neutral-50 active:scale-95'
@@ -185,6 +191,7 @@ export function ImpactCalculator() {
                       </span>
                       <button
                         onClick={() => updateQuantity(item.id, 1)}
+                        aria-label={`Increase ${item.name} quantity`}
                         className="w-9 h-9 flex items-center justify-center bg-white border border-neutral-200 text-neutral-800 hover:bg-neutral-50 active:scale-95 rounded-xl font-bold text-lg transition-all duration-200 select-none"
                       >
                         +
