@@ -2,6 +2,10 @@ import { StepCard } from './StepCard';
 import { steps } from '../data/mockData';
 import { ArrowRight } from 'lucide-react';
 
+/**
+ * HowItWorks — Section explaining the three-step recycling process.
+ * Renders step cards in a responsive grid with a connecting line on desktop.
+ */
 export function HowItWorks() {
   return (
     <section id="works" className="relative bg-neutral-50 py-24 md:py-32 overflow-hidden">
