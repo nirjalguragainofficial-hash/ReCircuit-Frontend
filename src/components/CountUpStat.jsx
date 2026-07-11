@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
+/**
+ * CountUpStat - Animates a number counting up from 0 when it scrolls into view.
+ */
 export function CountUpStat({ number, unit, label, icon: Icon }) {
   const [displayNumber, setDisplayNumber] = useState(0);
   const ref = useRef(null);
