@@ -1,6 +1,9 @@
 import { TestimonialCard } from './TestimonialCard';
 import { testimonials } from '../data/mockData';
 
+/**
+ * Testimonials - Renders a grid of customer reviews.
+ */
 export function Testimonials() {
   return (
     <section id="testimonials" aria-label="Customer Testimonials" className="bg-neutral-50 py-24 md:py-32">
