@@ -1,5 +1,9 @@
 import { Navigation, Hero, HowItWorks, FindCenter, WhatWeAccept, Impact, ImpactCalculator, Testimonials, FAQ, Newsletter, Footer, ScrollToTop } from './components';
 
+/**
+ * App - The root component of the React application.
+ * Composes all major sections of the landing page.
+ */
 function App() {
   return (
     <div className="min-h-screen bg-neutral-50 font-inter antialiased">
