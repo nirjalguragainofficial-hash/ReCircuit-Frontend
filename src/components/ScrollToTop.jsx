@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 
+/**
+ * ScrollToTop - A floating action button that appears when the user scrolls down,
+ * allowing them to easily smoothly scroll back to the top of the page.
+ */
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
