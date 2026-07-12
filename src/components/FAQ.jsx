@@ -2,6 +2,10 @@ import { FaqItem } from './FaqItem';
 import { faqItems } from '../data/mockData';
 import { MessageCircle } from 'lucide-react';
 
+/**
+ * FAQ — Renders the Frequently Asked Questions section.
+ * Maps through faqItems to display a list of expandable FaqItem components.
+ */
 export function FAQ() {
   return (
     <section id="faq" aria-label="Frequently Asked Questions" className="bg-white py-24 md:py-32">
