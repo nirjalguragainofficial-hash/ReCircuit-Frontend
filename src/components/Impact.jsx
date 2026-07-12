@@ -4,6 +4,10 @@ import { Recycle, BarChart3, Users } from 'lucide-react';
 
 const statIcons = [Recycle, BarChart3, Users];
 
+/**
+ * Impact — Renders the environmental impact statistics section.
+ * Uses CountUpStat cards to visually display growing metrics.
+ */
 export function Impact() {
   return (
     <section id="impact" aria-label="Our Environmental Impact" className="relative bg-neutral-900 py-24 md:py-32 overflow-hidden">
