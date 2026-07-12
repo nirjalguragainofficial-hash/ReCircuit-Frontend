@@ -87,7 +87,7 @@ export function Newsletter() {
             {/* Right form */}
             <div className="w-full md:w-auto md:min-w-[380px]">
               {isSubscribed ? (
-                <div className="flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 animate-reveal">
+                <div aria-live="polite" className="flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 animate-reveal">
                   <CheckCircle size={28} className="text-white flex-shrink-0" />
                   <div>
                     <p className="text-white font-bold text-lg">You're subscribed!</p>
