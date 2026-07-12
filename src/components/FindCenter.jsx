@@ -3,6 +3,10 @@ import { Search, MapPin, X } from 'lucide-react';
 import { CenterCard } from './CenterCard';
 import { mockCenters } from '../data/mockData';
 
+/**
+ * FindCenter — Renders the interactive center locator section.
+ * Includes search by text, category filters, and sorting controls.
+ */
 export function FindCenter() {
   const [searchLocation, setSearchLocation] = useState('');
   const [activeFilter, setActiveFilter] = useState('All');
