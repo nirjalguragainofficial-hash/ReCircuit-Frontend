@@ -13,6 +13,10 @@ const stepColors = [
   { bg: 'bg-violet-50 dark:bg-violet-950/30', icon: 'text-violet-500 dark:text-violet-400', border: 'border-violet-100 dark:border-violet-900/40', num: 'bg-violet-500' },
 ];
 
+/**
+ * StepCard — Renders an individual step within the "How It Works" process.
+ * Includes a step number badge, an icon, a title, and a description.
+ */
 export function StepCard({ step, index }) {
   const IconComponent = iconMap[step.icon] || Search;
   const colors = stepColors[index] || stepColors[0];
