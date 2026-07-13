@@ -1,6 +1,6 @@
 # ReCircuit — E-Waste Recycling Frontend
 
-ReCircuit is a modern e-waste recycling platform built with **React + Vite + Tailwind CSS**. It connects users with certified e-waste collection centers nearby and encourages responsible electronics disposal.
+ReCircuit is a modern e-waste recycling platform built with **React + Vite + Tailwind CSS**. It connects users with certified e-waste collection centers nearby, encouraging responsible electronics disposal.
 
 ## 🌱 Features
 
