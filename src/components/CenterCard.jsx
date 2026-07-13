@@ -1,5 +1,9 @@
 import { MapPin, CheckCircle, Clock, ArrowRight, Star } from 'lucide-react';
 
+/**
+ * CenterCard — Renders an individual drop-off center's details.
+ * Includes information on location, rating, operating hours, and accepted items.
+ */
 export function CenterCard({ center }) {
   return (
     <div className="group bg-white border border-neutral-100 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
