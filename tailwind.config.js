@@ -7,6 +7,7 @@ export default {
   ],
   theme: {
     extend: {
+      // ReCircuit branding colors mapped to CSS variables
       colors: {
         primary: 'var(--primary)',
         'primary-lt': 'var(--primary-lt)',
