@@ -1,5 +1,6 @@
 {
   "name": "recycle-frontend",
+  "description": "ReCircuit - E-Waste Recycling Frontend Platform",
   "private": true,
   "version": "0.0.0",
   "type": "module",
