@@ -19,7 +19,7 @@ export { Testimonials } from './Testimonials';
 export { FAQ } from './FAQ';
 export { Newsletter } from './Newsletter';
 
-// Shared / Atomic Components
+// Shared / Atomic Components (Re-used across sections)
 export { CenterCard } from './CenterCard';
 export { CountUpStat } from './CountUpStat';
 export { FaqItem } from './FaqItem';
