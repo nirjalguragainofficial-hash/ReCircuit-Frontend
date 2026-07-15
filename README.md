@@ -66,3 +66,4 @@ ReCircuit aims to reduce e-waste landfill contribution by making certified recyc
 
 MIT © ReCircuit Team
 <!-- update 1 -->
+<!-- update 2 -->
