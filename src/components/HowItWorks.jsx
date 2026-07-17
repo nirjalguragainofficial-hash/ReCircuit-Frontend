@@ -21,7 +21,7 @@ export function HowItWorks() {
             <span className="text-gradient-green">Responsible Recycling</span>
           </h2>
           <p className="text-lg text-neutral-500 max-w-xl mx-auto leading-relaxed">
-            Our simple process helps you recycle responsibly in just a few steps.
+            Drop off, track, and celebrate your environmental impact — all in three simple steps.
           </p>
         </div>
 
@@ -41,6 +41,7 @@ export function HowItWorks() {
         <div className="text-center">
           <a
             href="#centers"
+            aria-label="Start recycling your e-waste now"
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold text-base rounded-full shadow-lg hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200"
           >
             Start Recycling Now <ArrowRight size={18} />
