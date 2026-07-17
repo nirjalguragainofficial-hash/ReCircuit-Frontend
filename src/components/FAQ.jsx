@@ -34,10 +34,11 @@ export function FAQ() {
 
         {/* Contact prompt */}
         <div className="text-center mt-12">
-          <p className="text-neutral-500 text-base mb-4">Still have questions?</p>
+          <p className="text-neutral-500 text-base mb-4">Can't find what you're looking for?</p>
           {/* Launches the user's default system mail client */}
           <a
             href="mailto:support@recircuit.com"
+            aria-label="Contact ReCircuit support via email"
             className="inline-flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white text-sm font-semibold rounded-full hover:bg-neutral-700 transition-colors duration-200"
           >
             <MessageCircle size={16} /> Contact Support
