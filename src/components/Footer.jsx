@@ -16,10 +16,11 @@ export function Footer() {
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
           <div>
             <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-2 tracking-tight">Ready to Recycle?</h3>
-            <p className="text-white/80 text-lg">Join thousands of responsible recyclers and find a certified center near you.</p>
+            <p className="text-white/80 text-lg">Join thousands making a difference — find a certified center near you.</p>
           </div>
           <a
             href="#centers"
+            aria-label="Find a certified e-waste recycling center near you"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-bold text-base rounded-full shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 flex-shrink-0"
           >
             Find a Center <ArrowRight size={18} />
