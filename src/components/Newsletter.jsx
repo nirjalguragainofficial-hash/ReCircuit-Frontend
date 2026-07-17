@@ -80,7 +80,7 @@ export function Newsletter() {
                 Get Recycling Tips & Updates
               </h2>
               <p className="text-white/80 text-base leading-relaxed max-w-md">
-                Join our newsletter for the latest e-waste recycling tips, new center openings, and environmental impact reports.
+                Get e-waste recycling tips, new center alerts, and monthly environmental impact reports — straight to your inbox.
               </p>
             </div>
 
@@ -135,7 +135,7 @@ export function Newsletter() {
                 </div>
               )}
               <p className="text-white/60 text-xs mt-3 text-center md:text-left">
-                No spam, unsubscribe anytime. We respect your privacy.
+                We send 2–4 emails per month. Unsubscribe anytime, no questions asked.
               </p>
             </div>
           </div>
