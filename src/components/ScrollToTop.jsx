@@ -8,10 +8,10 @@ import { ArrowUp } from 'lucide-react';
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Listen to window scroll events to toggle button visibility based on offset
+  // Show button after scrolling 300px — visible earlier for better accessibility
   useEffect(() => {
     const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 400);
+      setIsVisible(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', toggleVisibility);
