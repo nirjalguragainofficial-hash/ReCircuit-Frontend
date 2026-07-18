@@ -9,8 +9,8 @@ import { Star, Quote } from 'lucide-react';
 export function TestimonialCard({ testimonial }) {
   return (
     <div className="group bg-white border border-neutral-100 rounded-2xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col relative overflow-hidden">
-      {/* Quote icon watermark */}
-      <Quote size={60} className="absolute top-4 right-4 text-neutral-50 dark:text-neutral-800/30 rotate-180 pointer-events-none" />
+      {/* Quote icon watermark — decorative only */}
+      <Quote aria-hidden="true" size={60} className="absolute top-4 right-4 text-neutral-50 dark:text-neutral-800/30 rotate-180 pointer-events-none" />
 
       {/* Stars */}
       <div className="flex gap-1 mb-4" aria-label={`Rating: ${testimonial.rating} out of 5 stars`}>
