@@ -65,10 +65,16 @@ export function CenterCard({ center }) {
 
         {/* Action buttons */}
         <div className="flex gap-2 mt-auto pt-4 border-t border-neutral-100">
-          <button className="flex-1 px-3 py-2 border-2 border-primary/20 text-primary rounded-xl font-semibold text-sm hover:bg-primary-lt hover:border-primary transition-all duration-200">
+          <button
+            aria-label={`Get directions to ${center.name}`}
+            className="flex-1 px-3 py-2 border-2 border-primary/20 text-primary rounded-xl font-semibold text-sm hover:bg-primary-lt hover:border-primary transition-all duration-200"
+          >
             Directions
           </button>
-          <button className="flex items-center justify-center gap-1.5 px-4 py-2 bg-accent text-white rounded-xl font-semibold text-sm hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-sm">
+          <button
+            aria-label={`Learn more about ${center.name}`}
+            className="flex items-center justify-center gap-1.5 px-4 py-2 bg-accent text-white rounded-xl font-semibold text-sm hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-sm"
+          >
             Learn More <ArrowRight size={14} />
           </button>
         </div>
