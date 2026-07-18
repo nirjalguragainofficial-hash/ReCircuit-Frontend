@@ -7,9 +7,12 @@ import { ChevronDown } from 'lucide-react';
  *
  * @param {string} question - The FAQ question text.
  * @param {string} answer   - The FAQ answer text shown when expanded.
+ * @param {string|number} id - Unique identifier used for ARIA relationships.
  */
-export function FaqItem({ question, answer }) {
+export function FaqItem({ question, answer, id }) {
   const [isOpen, setIsOpen] = useState(false);
+  const panelId = `faq-panel-${id ?? question.slice(0, 10).replace(/\s+/g, '-').toLowerCase()}`;
+  const triggerId = `faq-trigger-${id ?? question.slice(0, 10).replace(/\s+/g, '-').toLowerCase()}`;
 
   return (
     <div
@@ -18,8 +21,10 @@ export function FaqItem({ question, answer }) {
       }`}
     >
       <button
+        id={triggerId}
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
+        aria-controls={panelId}
         className={`w-full px-6 py-5 flex items-center justify-between text-left cursor-pointer transition-colors duration-200 focus-ring ${
           isOpen ? 'bg-accent/5' : 'bg-white hover:bg-neutral-50'
         }`}
@@ -36,6 +41,9 @@ export function FaqItem({ question, answer }) {
 
       {/* Animated answer panel */}
       <div
+        id={panelId}
+        role="region"
+        aria-labelledby={triggerId}
         style={{
           maxHeight: isOpen ? '400px' : '0px',
           opacity: isOpen ? 1 : 0,
