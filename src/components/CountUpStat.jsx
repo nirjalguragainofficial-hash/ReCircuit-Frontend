@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
+/** Duration (ms) of the count-up animation. */
+const ANIMATION_DURATION = 2000;
+
 /**
  * CountUpStat - Animates a number counting up from 0 when it scrolls into view.
  */
@@ -21,7 +24,6 @@ export function CountUpStat({ number, unit, label, icon: Icon }) {
   useEffect(() => {
     if (!isVisible) return;
     const numValue = parseInt(number.replace(/\D/g, ''));
-    const duration = 2000;
     const steps = 60;
     const increment = numValue / steps;
     let current = 0;
@@ -33,7 +35,7 @@ export function CountUpStat({ number, unit, label, icon: Icon }) {
       } else {
         setDisplayNumber(Math.floor(current));
       }
-    }, duration / steps);
+    }, ANIMATION_DURATION / steps);
     return () => clearInterval(timer);
   }, [isVisible, number]);
 
@@ -45,7 +47,7 @@ export function CountUpStat({ number, unit, label, icon: Icon }) {
       className="group flex flex-col items-center text-center p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
     >
       {Icon && (
-        <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div aria-hidden="true" className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
           <Icon size={22} className="text-accent" strokeWidth={1.5} />
         </div>
       )}
