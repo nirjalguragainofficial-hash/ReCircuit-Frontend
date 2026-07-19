@@ -142,6 +142,7 @@ export function ImpactCalculator() {
               {totals.itemsCount > 0 && (
                 <button
                   onClick={resetCalculator}
+                  aria-label="Reset all item quantities to zero"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-rose-600 hover:text-rose-700 transition-colors"
                 >
                   <Trash2 size={16} /> Reset
@@ -209,7 +210,7 @@ export function ImpactCalculator() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-2xl"></div>
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/10 rounded-full blur-xl"></div>
 
-            <div className="relative z-10">
+            <div className="relative z-10" aria-live="polite" aria-atomic="true">
               <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                 <Sparkles className="text-accent" size={20} />
                 Your Green Impact
