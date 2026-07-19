@@ -96,11 +96,13 @@ export function Newsletter() {
                 </div>
               ) : (
                 <div className="flex flex-col gap-2">
-                  <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+                  <form onSubmit={handleSubmit} noValidate className="flex flex-col sm:flex-row gap-3">
+                    {/* Visually hidden label for screen readers */}
+                    <label htmlFor="newsletter-email" className="sr-only">Email address</label>
                     <input
+                      id="newsletter-email"
                       type="email"
                       placeholder="Enter your email address"
-                      aria-label="Email address for newsletter"
                       value={email}
                       onChange={(e) => {
                         setEmail(e.target.value);
