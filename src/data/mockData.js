@@ -20,6 +20,7 @@ export const mockCenters = [
     hours: 'Mon-Sat: 8am-5pm',
     certified: true,
     rating: 4.6,
+    phone: '+977-01-4578901',
   },
   {
     id: 3,
@@ -30,6 +31,7 @@ export const mockCenters = [
     hours: 'Tue-Sun: 10am-7pm',
     certified: true,
     rating: 4.7,
+    phone: '+977-01-4589012',
   },
   {
     id: 4,
@@ -40,6 +42,7 @@ export const mockCenters = [
     hours: 'Mon-Fri: 7am-6pm',
     certified: true,
     rating: 4.9,
+    phone: '+977-01-4590123',
   },
   {
     id: 5,
@@ -50,6 +53,7 @@ export const mockCenters = [
     hours: 'Wed-Sun: 11am-5pm',
     certified: true,
     rating: 4.5,
+    phone: '+977-01-4601234',
   },
   {
     id: 6,
@@ -60,6 +64,7 @@ export const mockCenters = [
     hours: 'Mon-Sat: 9am-5pm',
     certified: true,
     rating: 4.8,
+    phone: '+977-01-4612345',
   },
 ];
 
