@@ -63,7 +63,7 @@ export function WhatWeAccept() {
                 className="group flex flex-col items-center text-center p-5 bg-white border-2 border-neutral-100 rounded-2xl cursor-pointer hover:border-accent/40 hover:bg-accent/5 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-xl bg-primary-lt flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-accent/15 transition-all duration-300">
-                  {IconComponent && <IconComponent size={28} className="text-primary" strokeWidth={1.5} />}
+                  {IconComponent && <IconComponent size={28} className="text-primary" strokeWidth={1.5} aria-hidden="true" />}
                 </div>
                 <p className="text-sm font-semibold text-neutral-700 leading-tight">{item}</p>
               </div>
