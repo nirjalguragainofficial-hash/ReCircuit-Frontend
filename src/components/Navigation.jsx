@@ -102,7 +102,7 @@ export function Navigation() {
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-100 shadow-sm" aria-label="Main navigation">
       <div className="max-w-[1200px] mx-auto px-6 relative flex items-center justify-between py-4">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 flex-shrink-0 group no-underline focus-ring p-1 rounded-lg">
+        <a href="#home" className="flex items-center gap-2 flex-shrink-0 group no-underline focus-ring p-1 rounded-lg" aria-label="ReCircuit — go to homepage" title="ReCircuit — go to homepage">
           <div className="w-9 h-9 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-200">
             <Cpu size={20} className="text-white" strokeWidth={2} />
           </div>
