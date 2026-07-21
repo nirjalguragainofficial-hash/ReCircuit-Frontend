@@ -30,7 +30,7 @@ export function StepCard({ step, index }) {
 
       {/* Icon box */}
       <div className={`w-20 h-20 ${colors.bg} border-2 ${colors.border} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 group-hover:shadow-md transition-all duration-300`}>
-        <IconComponent size={36} className={colors.icon} strokeWidth={1.5} />
+        <IconComponent size={36} className={colors.icon} strokeWidth={1.5} aria-hidden="true" />
       </div>
 
       <h3 className="text-xl font-bold text-neutral-900 mb-3">{step.title}</h3>
