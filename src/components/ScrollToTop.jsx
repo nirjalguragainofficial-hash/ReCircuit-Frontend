@@ -34,7 +34,7 @@ export function ScrollToTop() {
         isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75 pointer-events-none'
       }`}
     >
-      <ArrowUp size={20} strokeWidth={2.5} />
+      <ArrowUp size={20} strokeWidth={2.5} aria-hidden="true" />
     </button>
   );
 }
