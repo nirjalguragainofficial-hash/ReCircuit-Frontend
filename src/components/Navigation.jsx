@@ -53,6 +53,7 @@ function MobileMenu() {
             ))}
             <a
               href="#centers"
+              aria-label="Drop off your e-waste now — find a nearby center"
               className="inline-flex items-center justify-center px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-full shadow-sm"
               onClick={() => setOpen(false)}
             >
