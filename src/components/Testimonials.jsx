@@ -29,3 +29,5 @@ export function Testimonials() {
     </section>
   );
 }
+
+// Testimonials component exported
