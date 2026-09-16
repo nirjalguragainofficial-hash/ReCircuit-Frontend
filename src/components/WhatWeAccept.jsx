@@ -106,3 +106,5 @@ export function WhatWeAccept() {
     </section>
   );
 }
+
+// WhatWeAccept component exported
