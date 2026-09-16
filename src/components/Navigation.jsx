@@ -162,3 +162,5 @@ export function Navigation() {
     </nav>
   );
 }
+
+// Navigation component exported
